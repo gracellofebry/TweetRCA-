@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/png" sizes="60x60">
+    <link rel="stylesheet" href="css/style2.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Selected Messages</title>
+</head>
+<body>
+    <div class="container-2">
+        <!-- Membuat Ukuran untuk navigation di grid pertama dan menghilang kan element ketika ukuran mobile -->
+        <div class="navs-vertical d-md-none d-none d-lg-flex">
+            <!-- Membuat alement nav navigation menjadi position fixed agar meletakkan element secara permanen di suatu titik dan tetap diam sekalipun kita ngescroll browser ke bawah -->
+            <div class="fixed-nav">
+                
+                <div class="navs-vertical-center ">
+                    <div class="logo">
+                        <img class="image-logo" src="images/logo.png" alt="">
+                    </div>
+                    <div class="nav">
+                        <div><a href="twitter.html"><i class="fa fa-home" style="font-weight: 600;" ></i><span>Home</span></a></div>
+                        <div><a href="Explore.html"><i class="far fa-file"></i><span>Explore</span></a></div>
+                        <div><a href="notifications.html"><i class="fa fa-bell"></i><span>Notifications</span></a></div>
+                        <div><a href="messanges.html" style=" color: rgba(29,161,242,1.00); 
+                            fill: currentcolor;"><i class="fa fa-envelope"></i><span>Messages</span></a></div>
+                        <div><a href="bookmarks.html"><i class="fa fa-bookmark"></i><span>Bookmarks</span></a></div>
+                        <div><a href="lists.html"><i class="far fa-list-alt"></i><span>lists</span></a></div>               
+                        <div><a href="profile.html"><i class="fa fa-user"></i><span>Profile</span></a></div>
+                        <div><a href="more-all.html"><i class="fa fa-ellipsis-h" style="font-weight: 600;"></i><span>More</span></a></div>
+                        
+                        
+                        <div><button>Tweet</button></div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="bottom-header">
+                    <div class="profile-data mt-5 mb-3">   
+                      <img class="avatar" src="images/TweetProfile.jpg" alt="">
+                      <div class="username-profile">
+                          <div id="fullname-profile">RCA News </div>
+                          <div >@rca_news</div>
+                      </div>
+                      <span><i class="fa fa-ellipsis-h"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="selected-content-messange">
+           <div class="messange-menu ">
+                <div class="notif-position-fixed" style="border-bottom: 1px solid; border-color: #e1e1e1;box-shadow: 0 1px 1px -2px gray;">
+                    <div class="prefer-notif">
+                        <span>
+                            <a href="">Messages</a>
+                        </span>
+                        <span>
+                            <i class="fa fa-cog text-right "></i>
+                            <i class="far fa-envelope-open"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="content-menu-msg" >
+                    <div class="widh-search">
+                        <div class="search-msg">
+                            <div class="search">
+                                <input type="search" placeholder="Search TweetRCA">
+                                <div class="icon-content"><i class="fa fa-search"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-menu-messange" style="border-right: 3px solid rgb(29, 161, 242); ">
+                        <div class="logo-messange">
+                            <img src="images/jokowi.jpeg" alt="">
+                        </div>
+                        <div class="subject-messange">
+                          <div class="subject-title"><b>Jokowi</b><span> @jokowi</span><svg viewBox="0 0 24 24" aria-label="Verified account" style="position:relative;   "><g><path style="margin-top:2px;padding-top: 110px;" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"></path></g></svg></div>
+                          <div class="subject-username"><p>p</p></div>
+                        </div>
+                        <div class="date-messange">
+                           1m
+                        </div>
+                    </div>
+                    <div class="content-menu-messange">
+                        <div class="logo-messange">
+                            <img src="images/bill gates cerai.jpeg" alt="">
+                        </div>
+                        <div class="subject-messange">
+                          <div class="subject-title"><b>Bill Gates</b><span> @billgatesx</span><svg viewBox="0 0 24 24" aria-label="Verified account" style="position:relative;   "><g><path style="margin-top:2px;padding-top: 110px;" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"></path></g></svg></div>
+                          <div class="subject-username"><p>server Windows kacau bro.</p></div>
+                        </div>
+                        <div class="date-messange">
+                           1m
+                        </div>
+                    </div>
+                    <div class="content-menu-messange">
+                        <div class="logo-messange">
+                            <img src="images/kompastv.png" alt="">
+                        </div>
+                        <div class="subject-messange">
+                          <div class="subject-title"><b>KompasTV</b><span> @kompastv</span><svg viewBox="0 0 24 24" aria-label="Verified account" style="position:relative;   "><g><path style="margin-top:2px;padding-top: 110px;" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"></path></g></svg></div>
+                          <div class="subject-username"><p>oke mas.</p></div>
+                        </div>
+                        <div class="date-messange">
+                           1m
+                        </div>
+                    </div>
+                    <div class="content-menu-messange">
+                        <div class="logo-messange">
+                            <img src="images/mark zuckerburg.jpeg" alt="">
+                        </div>
+                        <div class="subject-messange">
+                          <div class="subject-title"><b>Mark Zuckerburg</b><span> @mrkzckrbrg</span><svg viewBox="0 0 24 24" aria-label="Verified account" style="position:relative;   "><g><path style="margin-top:2px;padding-top: 110px;" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"></path></g></svg></div>
+                          <div class="subject-username"><p>is that real ?
+                          </p></div>
+                        </div>
+                        <div class="date-messange">
+                           1m
+                        </div>
+                    </div>
+                    <div class="content-menu-messange">
+                        <div class="logo-messange">
+                            <img src="images/medcom.png" alt="">
+                        </div>
+                        <div class="subject-messange">
+                          <div class="subject-title"><b>Medcom Indonesia</b><span> @medcomid</span><svg viewBox="0 0 24 24" aria-label="Verified account" style="position:relative;   "><g><path style="margin-top:2px;padding-top: 110px;" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"></path></g></svg></div>
+                          <div class="subject-username"><p>okey mas , see you muach.</p></div>
+                        </div>
+                        <div class="date-messange">
+                           1m
+                        </div>
+                    </div>
+                    <div class="content-menu-messange">
+                        <div class="logo-messange">
+                            <img src="images/logo_profile.jpg" alt="">
+                        </div>
+                        <div class="subject-messange">
+                          <div class="subject-title"><b>RizkyDwiPutra</b><span> @rizkydlbs_</span><svg viewBox="0 0 24 24" aria-label="Verified account" style="position:relative;   "><g><path style="margin-top:2px;padding-top: 110px;" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"></path></g></svg></div>
+                          <div class="subject-username"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, nesciunt?</p></div>
+                        </div>
+                        <div class="date-messange">
+                           1m
+                        </div>
+                    </div>
+                 
+                    
+                    <div style="height: 100%;"></div>
+                    
+                </div>
+           </div>
+           <div class="messange-select ">
+                <div class="notif-position-fixed" style="border-bottom: 1px solid; border-color: #e1e1e1;box-shadow: 0 1px 1px -2px gray;">
+                    <div class="selected-prefer">
+                        <div class="logo-select-messange  d-lg-none d-none d-block  ">
+                            <a href="messanges.html"><i class="fas fa-arrow-left"></i></a>
+                        </div>
+                        <div class="logo-select-messange d-md-none d-none d-lg-flex">
+                            <img src="images/jokowi.jpeg" alt="">
+                        </div>
+                       
+                        <div class="profile-messange">
+                            <span>
+                                <a href="">Jokowi</a>
+                                <p>@jokowi</p>
+                            </span>
+                        </div>
+                        <div class="setting-profile">
+                            <span>
+                                <i class="fas fa-info-circle"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+               <div class="content-messange-selected">
+                   <div class="joined-chat-messange">
+                        <div class="subject-title"><b>Jokowi</b><span> @jokowi</span></div>
+                        <div class="subject-username"><p><i class="far fa-calendar-alt"></i> Joined April 2005</p></div>
+ 
+                   </div>
+
+                    <div class="text-messange-select-right float-right">
+                        assalamualaikum , Pak.
+                    </div>
+                    <div class="date-messange-right float-right">
+                        13:00 <i class="fas fa-check-double" style="color: #2298ea;"></i>
+                    </div>
+                    <div class="text-messange-select-left float-left">
+                        iya Bro
+                    </div>
+                    <div class="date-messange-left float-left">
+                        13:01
+                    </div>
+                    <div class="text-messange-select-right float-right">
+                        Pak , ijin naik sepeda bisa di istana , istri saya ngidam soalnya :)
+                        </div>
+                    <div class="date-messange-right float-right">
+                        13:01 <i class="fas fa-check-double" style="color: #2298ea;"></i>
+                    </div>
+                    <div class="text-messange-select-left float-left">
+                        waduh Bro , rusak rumput saya.
+                    </div>
+                    <div class="date-messange-left float-left">
+                        14:00 
+                    </div>
+                    <div class="text-messange-select-right float-right">
+                        yaude, deh pak ya, boleh la tu
+                    </div>
+                    <div class="date-messange-right float-right">
+                        14:00  <i class="fas fa-check-double" style="color: #2298ea;"></i>
+                    </div>
+                    <div class="text-messange-select-left float-left">
+                        maksud lu apaan woi -_-
+                    </div>
+                   
+                    <div class="text-messange-select-left float-left">
+                        p
+                    </div>
+                    <div class="date-messange-left float-left">
+                        14:01 
+                    </div>
+                </div>
+               <div class="footer-messange">
+                    <div class="footer-messange-select">
+                         <div class="icon-footer-messange">
+                             <span> <i class="far fa-images"></i></span>
+                             <span> <i class="far fa-smile"></i></span>
+                         </div>
+                        <div class="search-messange-footer">           
+                                <input type="search" placeholder="Search TweetRCA">
+                        </div>
+                        <div class="footer-send">
+                            <span>
+                            <i class="far fa-paper-plane"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+              
+           </div>
+        </div>
+    </div>
+</body>
+</html>
